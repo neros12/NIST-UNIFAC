@@ -1,6 +1,6 @@
 from typing import List
 
-from .modules import auto_fragmentation, calculate_gamma
+from .modules import auto_fragment, calculate_gamma
 
 
 def calculate_binary_gamma(
@@ -35,8 +35,8 @@ def calculate_binary_gamma(
     gamma : List[float]
         A list containing activity coefficients [γ1, γ2] for the two components.
     """
-    cp1 = auto_fragmentation(SMILES1)
-    cp2 = auto_fragmentation(SMILES2)
+    cp1 = auto_fragment(SMILES1)
+    cp2 = auto_fragment(SMILES2)
     gamma = calculate_gamma([cp1, cp2], [x1, x2], T)
 
     return gamma

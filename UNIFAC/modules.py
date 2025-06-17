@@ -7,7 +7,7 @@ from rdkit.Chem import Descriptors
 from . import parameters
 
 
-def auto_fragmentation(SMILES: str) -> List[int]:
+def auto_fragment(SMILES: str) -> List[int]:
     """
     Fragment a molecule into UNIFAC subgroups based on SMARTS matching.
 
